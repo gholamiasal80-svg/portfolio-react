@@ -1,0 +1,88 @@
+REACT + VITE CONVERSION CHECKLIST
+==================================
+
+PROJECT FILES CREATED:
+[✓] index.html - HTML entry point with Google Fonts
+[✓] package.json - Dependencies and npm scripts
+[✓] vite.config.js - Vite build configuration
+[✓] src/main.jsx - React app bootstrap
+[✓] src/App.jsx - Router with all routes
+[✓] src/styles/globals.css - Complete design system
+
+COMPONENTS CREATED:
+[✓] src/components/Header.jsx - Navigation (removed "use client", next/link → react-router Link)
+[✓] src/components/Footer.jsx - Footer links (removed "use client", next/link → react-router Link)
+[✓] src/components/HeroPortrait.jsx - Eye tracking (removed "use client", all mouse tracking logic intact)
+[✓] src/components/PaperTexture.jsx - Canvas texture (removed "use client", all canvas logic intact)
+
+PAGES CREATED:
+[✓] src/pages/Home.jsx - Hero + featured work
+[✓] src/pages/Work.jsx - Physics cards with clothesline strings (ALL physics code preserved)
+[✓] src/pages/About.jsx - Pull-to-reveal animation (ALL interaction logic preserved)
+[✓] src/pages/Contact.jsx - Contact form + breathing animation (ALL animations preserved)
+[✓] src/pages/FineArt.jsx - Hanging gallery (ALL catenary math and SVG preserved)
+
+CONVERSION RULES FOLLOWED:
+[✓] All TypeScript types removed (no type annotations)
+[✓] All "use client" directives removed
+[✓] All next/link replaced with react-router Link
+[✓] usePathname() replaced with useLocation().pathname
+[✓] globals.css copied EXACTLY, word-for-word from Next.js
+[✓] All physics simulation code preserved completely
+[✓] All SVG filtering and bezier curves preserved
+[✓] All animations and @keyframes preserved
+[✓] All inline styles preserved
+[✓] All CSS classes preserved
+[✓] All props and state management preserved
+
+SPECIAL LOGIC PRESERVED:
+[✓] Work page - Spring physics (vy *= 0.82, etc.)
+[✓] Work page - SVG compound transforms with setAttribute
+[✓] Work page - Pointer event handling (pointerdown/pointermove/pointerup)
+[✓] Work page - Clothesline string path generation
+[✓] About page - Pull-to-reveal reveal state management
+[✓] About page - Cubic bezier easing functions
+[✓] Contact page - Sleep Z floating animations
+[✓] Contact page - Breathing transformation animation
+[✓] FineArt page - Catenary path builder function
+[✓] FineArt page - Multiple hanging row configurations
+[✓] All eye-tracking calculations preserved
+
+ROUTING CONFIGURED:
+[✓] / → Home
+[✓] /work → Work
+[✓] /about → About
+[✓] /contact → Contact
+[✓] /fine-art → FineArt
+[✓] Router basename set to "/portfolio-react"
+
+ASSETS NEEDED (MANUALLY COPY):
+[ ] Copy from v07/public/ to portfolio-react/public/:
+    - hero-face.png
+    - left-eye.png
+    - right-eye.png
+    - hand-string.png
+    - hands.png
+    - me.png
+    - about-face.png
+    - contact-sleepy.png
+    - cliper1.png, cliper2.png
+    - work1.jpg, work2.jpg, work3.jpg
+    - art1.png, art2.png, art3.png, art4.png, art5.png
+    - Any .html or .svg files
+
+BEFORE RUNNING:
+1. npm install
+2. Copy all image assets from v07/public/
+3. Update vite.config.js base path if needed (currently '/portfolio-react/')
+
+COMMANDS:
+- npm run dev     : Start development server
+- npm run build   : Build for production
+- npm run preview : Preview production build
+
+TOTAL LINES OF CODE: 3,307 lines
+- Pages: ~1,200 lines
+- Components: ~600 lines
+- CSS: ~1,100 lines (globals.css)
+- Config: ~50 lines
