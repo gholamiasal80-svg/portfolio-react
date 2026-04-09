@@ -8,10 +8,13 @@ import FineArt from './pages/FineArt'
 import Heinz from './pages/work/Heinz'
 import KMP from './pages/work/KMP'
 import Psych from './pages/work/Psych'
+import Oniwash from './pages/work/Oniwash'
+import PosterRedesign from './pages/work/PosterRedesign'
+import Photography from './pages/work/Photography'
 
 function App() {
   return (
-    <Router basename="/portfolio-react">
+    <Router basename="/">
       <PaperTexture />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,6 +22,9 @@ function App() {
         <Route path="/work/heinz" element={<Heinz />} />
         <Route path="/work/kmp" element={<KMP />} />
         <Route path="/work/psych" element={<Psych />} />
+        <Route path="/work/oniwash" element={<Oniwash />} />
+        <Route path="/work/poster-redesign" element={<PosterRedesign />} />
+        <Route path="/work/photography" element={<Photography />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/fine-art" element={<FineArt />} />

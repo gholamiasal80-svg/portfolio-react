@@ -291,10 +291,10 @@ const categories = ["All", "UI/UX", "Graphic Design", "Video"]
 const projects = [
   {
     slug: "heinz",
-    title: "Heinz Ketchup Campaign",
-    category: "Graphic Design",
+    title: "Artsy Gallery",
+    category: "UI/UX",
     image: import.meta.env.BASE_URL + "work1.jpg",
-    alt: "Heinz ketchup campaign design",
+    alt: "Artsy Gallery app design",
   },
   {
     slug: "kmp",
@@ -309,6 +309,27 @@ const projects = [
     category: "UI/UX",
     image: import.meta.env.BASE_URL + "work3.jpg",
     alt: "Psych mental health app on a phone",
+  },
+  {
+    slug: "oniwash",
+    title: "Oniwash Campaign Design",
+    category: "Graphic Design",
+    image: import.meta.env.BASE_URL + "work1.jpg",
+    alt: "Oniwash graphic design poster campaign",
+  },
+  {
+    slug: "poster-redesign",
+    title: "Poster Redesign",
+    category: "Graphic Design",
+    image: import.meta.env.BASE_URL + encodeURIComponent("Redesign_Gholami-Recovered.jpg"),
+    alt: "Translink safety poster redesign",
+  },
+  {
+    slug: "photography",
+    title: "Photography & Photoshop",
+    category: "Graphic Design",
+    image: import.meta.env.BASE_URL + "work1.jpg",
+    alt: "Photography and Photoshop compositing project",
   },
 ]
 
