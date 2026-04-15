@@ -558,7 +558,7 @@ export default function WorkPage() {
         style={{
           position: "fixed",
           right: armExtended ? "-200px" : "168px",
-          bottom: "calc(8% + 720px)",
+          bottom: "calc(8% + min(720px, 68vh))",
           zIndex: 52,
           pointerEvents: "none",
           opacity: armExtended ? 0 : 1,
