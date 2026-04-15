@@ -1,4 +1,8 @@
 {
-  "buildCommand": "chmod -R +x node_modules/.bin && npm run build",
-  "outputDirectory": "dist"
+  "buildCommand": "chmod -R +x node_modules/.bin && npm run build && rm -f dist/assets/middleware",
+  "outputDirectory": "dist",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
