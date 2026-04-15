@@ -328,7 +328,7 @@ const projects = [
     slug: "photography",
     title: "Photography & Photoshop",
     category: "Graphic Design",
-    image: import.meta.env.BASE_URL + encodeURIComponent("The project.jpg"),
+    image: import.meta.env.BASE_URL + "photo-cover.jpg",
     alt: "Photography and Photoshop compositing project",
   },
 ]
