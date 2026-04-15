@@ -1,5 +1,4 @@
 {
-  "installCommand": "npm ci",
-  "buildCommand": "npm run build",
+  "buildCommand": "chmod -R +x node_modules/.bin && npm run build",
   "outputDirectory": "dist"
 }
