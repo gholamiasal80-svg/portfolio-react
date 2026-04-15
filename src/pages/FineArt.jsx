@@ -429,6 +429,56 @@ export default function FineArtPage() {
         >← Close</button>
       </div>
 
+      {/* ── "Click here" hint cue near the waving arm ── */}
+      <div
+        style={{
+          position: "fixed",
+          right: armExtended ? "-200px" : "168px",
+          bottom: "calc(8% + 720px)",
+          zIndex: 52,
+          pointerEvents: "none",
+          opacity: armExtended ? 0 : 1,
+          transition: "opacity 0.5s ease, right 0.62s cubic-bezier(0.34, 1.06, 0.64, 1)",
+          animation: armExtended ? "none" : "hintPulse 4s ease-in-out infinite",
+          animationDelay: "1.8s",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: "6px",
+        }}
+      >
+        {/* Label bubble */}
+        <div style={{
+          background: "#FBD541",
+          borderRadius: "999px",
+          padding: "6px 14px",
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+        }}>
+          {/* Cursor icon */}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#111" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4l7 18 3-7 7-3L4 4z"/>
+          </svg>
+          <span style={{
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontSize: "12px",
+            fontWeight: 700,
+            letterSpacing: "0.08em",
+            color: "#111",
+            whiteSpace: "nowrap",
+          }}>
+            Click me!
+          </span>
+        </div>
+        {/* Arrow pointing down-right toward the hand */}
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style={{ marginRight: "8px" }} xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4 Q20 4 22 22" stroke="#111" strokeWidth="1.8" strokeLinecap="round" fill="none" strokeDasharray="3 3"/>
+          <path d="M17 17 L22 22 L27 17" stroke="#111" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      </div>
+
       <div
         onClick={handleArmClick}
         role="button" tabIndex={0}
@@ -458,6 +508,10 @@ export default function FineArtPage() {
           54%        { transform: rotate( -4deg); }
           72%        { transform: rotate(  2.5deg); }
           88%        { transform: rotate( -1.5deg); }
+        }
+        @keyframes hintPulse {
+          0%,  100% { opacity: 0.45; transform: translateX(0); }
+          50%        { opacity: 0.75; transform: translateX(-4px); }
         }
       `}</style>
     </div>
